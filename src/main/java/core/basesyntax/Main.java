@@ -36,7 +36,6 @@ public class Main {
         for (var dto : dtos) {
             strategy.getHandlers(dto).forEach(oh -> oh.apply(dto));
         }
-        System.out.println(Storage.fruitsQuantity);
         FruitReportCreate prapaireReport = new FruitReportCreateImpl();
         String report = prapaireReport.createReport(Storage.fruitsQuantity);
         System.out.println(report);
